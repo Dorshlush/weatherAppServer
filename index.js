@@ -27,14 +27,12 @@ app.get('/api/weather/:city', async (req, res) => {
 
     // Send the specific weather data fields as a JSON response
     res.json(weatherData);
-    console.log("this is working")
   } catch (error) {
     console.error('Error fetching weather data:', error);
     res.status(500).json({ error: 'Unable to fetch weather data' });
   }
 });
 
-// ... other code ...
 
 app.listen(PORT,() => {
   console.log(`Server is running on port ${PORT}`);
